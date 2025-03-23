@@ -85,7 +85,7 @@
                 </button>
             </div>
             <div class="edit-title-detail">
-                <div class="edit-title-detail-dot"></div>已抄送 
+                <div class="edit-title-detail-dot"></div>已抄送
             </div>
             <div class="edit-detail-content">
                 <div class='row no-delete'>
@@ -139,8 +139,8 @@ export default {
     data(){
         return {
             page: 0,
-            studentName: 'Example',
-            studentID: '1234567890',
+            studentName: '王婧婧',
+            studentID: '202213501110',
             items: [
                 {
                     name: "审批编号",
@@ -149,18 +149,6 @@ export default {
                 {
                     name: "是否离校",
                     value: "是"
-                },
-                {
-                    name: "是否离开沈阳",
-                    value: "否"
-                },
-                {
-                    name: "是否离开辽宁省",
-                    value: "否"
-                },
-                {
-                    name: "前往省份、城市",
-                    value: ""
                 },
                 {
                     name: "开始时间",
@@ -172,31 +160,78 @@ export default {
                 },
                 {
                     name: "时长",
-                    value: "24"
+                    value: "1"
                 },
                 {
                     name: "请假类型",
-                    value: "事假"
+                    value: "病假"
                 },
                 {
+                    name: "性别",
+                    value: "女"
+                },
+                 {
                     name: "本人联系电话",
+                    value: "13190594210"
+                },
+                 {
+                    name: "家长姓名",
+                    value: "代新梅"
+                },
+                 {
+                    name: "家长有效联系方式（手机，固话，邮箱）",
+                    value: "13245172084"
+                },
+                 {
+                    name: "学生现住宿舍号",
+                    value: "307"
+                },
+                 {
+                    name: "请假期间是否离校",
+                    value: "是"
+                },
+                 {
+                    name: "请假期间是否在宿舍住宿",
+                    value: "是"
+                },
+                 {
+                    name: "佐证材料",
                     value: ""
                 },
-                {
-                    name: "紧急联系人",
-                    value: ""
+                 {
+                    name: "请假事由",
+                    value: "病假，医院就医"
+                },
+                 {
+                    name: "请假详细原因",
+                    value: "急性肠胃炎"
                 },
                 {
-                    name: "紧急联系电话",
-                    value: ""
-                },
-                {
-                    name: "请假原因",
-                    value: ""
+                    name: "请假去向具体地址",
+                    value: "内蒙古医科大学附属医院"
                 }
             ],
-            approvers: [],
-            ccs: [],
+            approvers: [
+                 {
+                name: '候睿',
+                id: '20070000035',
+                time: '2021-01-01 08:00'
+                  },
+
+            ],
+            ccs: [ {
+                name: '贾金同',
+                id: '20060000237'
+            },
+            {
+                name: '李雨衡',
+                id: '202013501064'
+            },
+            {
+                name: '丛彧哲',
+                id: '20230000066'
+            }
+            ],
             deletingItem: -1,
             deletingApprover: -1,
             deletingCC: -1
@@ -214,16 +249,9 @@ export default {
         }
     },
     mounted(){
-        let lastDataJson = window.localStorage.getItem('last-data');
-        if(lastDataJson){
-            let data = JSON.parse(lastDataJson);
-            this.studentName = data.studentName;
-            this.studentID = data.studentID;
-            this.items = data.items;
-            this.approvers = data.approvers;
-            this.ccs = data.ccs;
-        }
-    }
+    // 此处不再从 localStorage 读取数据
+}
+
 }
 </script>
 

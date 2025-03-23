@@ -2,7 +2,7 @@
     <div id="sub-root">
         <div class="hx-layout">
             <main class="hx-content">
-                <div class="wfTitle___Y-ebx">{{studentName}}的请销假</div>
+                <div class="wfTitle___Y-ebx">{{studentName}}的请假</div>
                 <div class="hx-detail">
                     <div class="hx-detail-group">
                         <div class="hx-title-detail">
